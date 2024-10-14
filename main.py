@@ -1,3 +1,19 @@
+
+'''
+
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script simulates RFs in the retina using Leaky Integrate-and-Fire (LIF) neurons.
+It generates a Poisson-distributed spike train and processes it through a 2D grid of LIF neurons.
+The script visualizes the spike raster and membrane potential dynamics of the neurons over time.
+
+Look for the config file to set the parameters of the simulation (e.g., tau_mem, width, height, etc.).
+Functions are in helpers.py.
+
+'''
+
+
+
 import os
 os.environ['ApplePersistenceIgnoreState'] = 'YES'  # Ensures smooth interaction with Apple’s window state persistence
 import torch
@@ -12,7 +28,6 @@ matplotlib.use('qt5agg')  # Sets up Matplotlib to use the Qt5 backend for graphi
 
 # Generate a Poisson-distributed tensor representing a spike train over 'lenstim' time steps
 ts = torch.poisson(torch.ones(1, lenstim, 1)).float()
-
 # Initialize arrays to hold the x, y coordinates and 'p' (some other parameter, possibly neuron activity or position)
 x = np.zeros(lenstim).astype(int)
 y = np.zeros(lenstim).astype(int)
