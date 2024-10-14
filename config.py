@@ -1,8 +1,8 @@
 
 
 # parameters RFs
-width = 2
-height = 2
+width = 128
+height = 128
 num_neurons = width * height
 tau_mem = 1
 
