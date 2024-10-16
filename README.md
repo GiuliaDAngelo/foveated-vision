@@ -39,7 +39,7 @@ In this tutorial you will create the eccentric retina and visualise the output s
 
 Time to connect your Speck to your computer and visualise the output of the sensor!
 
-![visualiser](images/visualiser.gif)
+![visualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/images/Speckvisualiser.gif)
 
 
 ## Installation
