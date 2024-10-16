@@ -11,17 +11,17 @@ visual processing tasks with biologically inspired models of vision.
 
 ## Tutorials
 
-- ### tutorial_single_neuron
+- ### [tutorial_single_neuron](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_single_neuron.py)
 
 You will learn how to create a single LIF, inject it with current and plot the membrane potential and spikes.
 
-- ### tutorial_retina
+- ### [tutorial_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialretina.py)
 
 You will learn how to create a retina, 128x128 receptive fields and plot the raster plot.
 
 ![firsttutorials](images/tutorialsingleneuronretina.png)
 
-- ### tutorial_create_eccentric_retina
+- ### [tutorial_create_eccentric_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_create_eccentric_retina.py)
 
 You will create a retina with eccentric receptive fields, 128x128 receptive fields and plot the raster plot.
 The eccentric receptive fields are created by using the `eccentricity` parameters in the `create_eccentric_RFs()` function.
@@ -29,7 +29,7 @@ The parameters are in helpers/config.py file.
 In this script you will also plot the eccentric structure and the Look Up Table (LUT) of the receptive fields.
 The LUT will be created so that it'll speed up the process of finding the receptive field of a given neuron.
 
-- ### tutorial_eccentric_retina
+- ### [tutorial_eccentric_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_eccentric_retina.py)
 
 In this tutorial you will create the eccentric retina and visualise the output spikes of the retina.
 
