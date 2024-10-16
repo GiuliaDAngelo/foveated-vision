@@ -35,6 +35,15 @@ In this tutorial you will create the eccentric retina and visualise the output s
 
 ![secondtutorials](images/tutorialeccentricretina.gif)
 
+- ### [tutorialSpeckVisualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialSpeckVisualiser.py)
+
+Time to connect your Speck to your computer and visualise the output of the sensor!
+
+![visualiser](images/visualiser.gif)
+
+
+## Installation
+Have a look at reuirements.txt file to see the dependencies.
 
 ### Features:
 - **Foveated Receptive Fields**: These fields allow for a more detailed visual representation at the center (fovea), while progressively coarser representation occurs as you move towards the periphery. This mimics the behavior of the human visual system.
