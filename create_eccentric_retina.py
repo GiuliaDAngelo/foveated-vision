@@ -47,7 +47,7 @@ if __name__ == "__main__":
             cy += height // 2
 
             # Compute the receptive field size based on the eccentricity
-            circle_radius = compute_rf_size(rho, W_max, rho0, R)
+            circle_radius = int(compute_rf_size(rho, W_max, rho0, R))
 
             # Create a circle patch to represent the receptive field
             circle = plt.Circle((cx, cy), circle_radius, color='k', fill=False)
