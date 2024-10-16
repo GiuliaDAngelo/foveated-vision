@@ -13,9 +13,8 @@ visual processing tasks with biologically inspired models of vision.
 
 - [tutorial_single_neuron](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_single_neuron.py)
 - [tutorial_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialretina.py)
-- [tutorial_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialretina.py)
 - [tutorial_create_eccentric_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_create_eccentric_retina.py)
-
+- [tutorialSpeckVisualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialSpeckVisualiser.py)
 
 ## Let's start! 
 
