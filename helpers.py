@@ -6,6 +6,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 from config import *
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# This is a fuction to simplify a fraction
 
 
 class RFs:
@@ -53,3 +59,5 @@ def plot_mempotential(neurons, x, y):
     plt.xlabel("$t$ [ms]")
     plt.ylabel("$V_{mem}$");
     plt.show()
+
+
