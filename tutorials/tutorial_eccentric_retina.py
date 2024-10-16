@@ -1,10 +1,13 @@
+import sys
+sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
+
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import csv
 # from StereoAedatReader import *
-from helpers import *
-from config import *
+from helpers.helpers import *
+from helpers.config import *
 import imageio
 
 

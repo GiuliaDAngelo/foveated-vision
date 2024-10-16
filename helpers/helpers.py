@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
+
 import os
 os.environ['ApplePersistenceIgnoreState'] = 'YES'
 import torch
@@ -5,7 +8,7 @@ import sinabs.layers as sl
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
-from config import *
+from helpers.config import *
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns

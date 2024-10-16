@@ -12,7 +12,8 @@ Functions are in helpers.py.
 
 '''
 
-
+import sys
+sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
 
 import os
 os.environ['ApplePersistenceIgnoreState'] = 'YES'  # Ensures smooth interaction with Apple’s window state persistence
@@ -21,8 +22,8 @@ import sinabs.layers as sl
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
-from helpers import *  # Import helper functions (likely custom utility code)
-from config import *  # Import configuration parameters (e.g., tau_mem, width, height, etc.)
+from helpers.helpers import *  # Import helper functions (likely custom utility code)
+from helpers.config import *  # Import configuration parameters (e.g., tau_mem, width, height, etc.)
 
 matplotlib.use('qt5agg')  # Sets up Matplotlib to use the Qt5 backend for graphical display
 

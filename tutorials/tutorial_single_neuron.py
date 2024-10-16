@@ -1,3 +1,12 @@
+'''
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script create a single neuron and inject it with current to see the membrane potential dynamics.
+From sinabs documentation.
+'''
+
+
+
 import os
 os.environ['ApplePersistenceIgnoreState'] = 'YES'
 import torch

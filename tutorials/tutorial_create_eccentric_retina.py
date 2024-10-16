@@ -7,11 +7,13 @@ The code does take isnpiration from the following article:
 Chessa, M., Maiello, G., Bex, P. J., & Solari, F. (2016). A space-variant model for motion interpretation across the visual field. Journal of vision, 16(2), 12-12.
 '''
 
+import sys
+sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
 
 import numpy as np
 import matplotlib.pyplot as plt
-from helpers import *
-from config import *
+from helpers.helpers import *
+from helpers.config import *
 
 
 if __name__ == "__main__":
