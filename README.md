@@ -51,7 +51,7 @@ Time to connect your Speck to your computer and visualise the output of the sens
 
 
 ## Installation
-Have a look at reuirements.txt file to see the dependencies.
+Have a look at the [requirements.txt](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/requirements.txt) file to see the dependencies.
 
 ### Features:
 - **Foveated Receptive Fields**: These fields allow for a more detailed visual representation at the center (fovea), while progressively coarser representation occurs as you move towards the periphery. This mimics the behavior of the human visual system.
