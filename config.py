@@ -10,7 +10,8 @@ num_neurons = width * height
 tau_mem = 1
 
 #parameters events
-lenstim = 100
+lenstim = 1000
+t_window = 20
 
 #parameters eccentric retina
 a = 1.3 # Nonlinearity parameter for log-polar mapping. This controls how the receptive field sizes change with eccentricity.

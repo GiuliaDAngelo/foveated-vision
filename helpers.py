@@ -19,12 +19,12 @@ class RFs:
         self.neuron = sl.LIF(tau_mem=tau_mem)
         self.vmem = []
         self.spikes_ts = []
-        self.cx = 0
-        self.cy = 0
-        self.radius = 0
-        self.R = 0
-        self.S = 0
-        self.ID = 0
+        self.cx: int = 0
+        self.cy: int = 0
+        self.radius: int = 0
+        self.R: int = 0
+        self.S: int = 0
+        self.ID: int = 0
 
 
 import matplotlib.pyplot as plt
@@ -137,15 +137,18 @@ def create_eccentric_RFs():
             cx += width // 2
             cy += height // 2
 
+            # if the border exceeses the image, skip the neuron
+            if cx < 0 or cx >= width or cy < 0 or cy >= height:
+                continue
             # Compute the receptive field size based on the eccentricity
             circle_radius = int(compute_rf_size(rho, W_max, rho0, R))
 
             # Create LIF neuron
-            neurons[neuronID].cx = cx
-            neurons[neuronID].cy = cy
+            neurons[neuronID].cx = int(cx)
+            neurons[neuronID].cy = int(cy)
             neurons[neuronID].radius = circle_radius
-            neurons[neuronID].R = r
-            neurons[neuronID].S = s
+            neurons[neuronID].R = int(r)
+            neurons[neuronID].S = int(s)
             neurons[neuronID].ID = neuronID
 
             # Create a circle patch to represent the receptive field
@@ -193,3 +196,17 @@ def plot_mask(mask, width, height):
     plt.xlabel('X')
     plt.ylabel('Y')
     plt.show(block=True)
+
+
+def gaussian_plot(neurons, ID, window):
+    # draw a gaussian shape centred in neurons[ID].cy, neurons[ID].cx and big as neurons[ID].radius
+    sigma = neurons[ID].radius / 2.0
+    for i in range(-neurons[ID].radius, neurons[ID].radius):
+        for j in range(-neurons[ID].radius, neurons[ID].radius):
+            if (neurons[ID].cy + i) >= 0 and (neurons[ID].cy + i) < height and (
+                    neurons[ID].cx + j) >= 0 and (neurons[ID].cx + j) < width:
+                distance = np.sqrt(i ** 2 + j ** 2)
+                if distance <= neurons[ID].radius:
+                    gaussian_value = np.exp(-(distance ** 2) / (2 * sigma ** 2))
+                    window[neurons[ID].cy + i, neurons[ID].cx + j] = gaussian_value * 255
+    return window
