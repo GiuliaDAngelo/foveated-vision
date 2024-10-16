@@ -15,6 +15,7 @@ visual processing tasks with biologically inspired models of vision.
 - [tutorial_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialretina.py)
 - [tutorial_create_eccentric_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_create_eccentric_retina.py)
 - [tutorialSpeckVisualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialSpeckVisualiser.py)
+- [tutorial_Speck_events](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speck_events.py)
 
 ## Let's start! 
 
@@ -47,6 +48,8 @@ In this tutorial you will create the eccentric retina and visualise the output s
 Time to connect your Speck to your computer and visualise the output of the sensor!
 
 ![visualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/images/Speckvisualiser.gif)
+
+- ### [tutorial_Speck_events](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speck_events.py)
 
 
 ## Installation
