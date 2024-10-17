@@ -1,71 +1,83 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('qt5agg')
+import cv2
 import sinabs.backend.dynapcnn.io as sio
 import samna
 import time
+import threading
+import random
 
-# Parameters visualisation
-tw = 1000
+# Visualization parameters
+resolution = [128, 128]  # Resolution of the DVS sensor
+drop_rate = 0.7  # Percentage of events to drop (e.g., 70% of events)
 
-# List all connected devices that are currently plugged into the PC.
+# List all connected devices
 device_map = sio.get_device_map()
 print(device_map)
 
-# Open the devkit device by specifying its name (e.g., "speck2fdevkit:0").
+# Open the devkit device
 devkit = sio.open_device("speck2fdevkit:0")
 
-# Create an EventFilterGraph instance from samna, which will be used to handle event streaming.
+# Create and configure the event streaming graph
 samna_graph = samna.graph.EventFilterGraph()
 
-# Initialize a SpeckConfiguration object, which defines the configuration settings for the device.
+# Initialize and apply the device configuration
 devkit_config = samna.speck2f.configuration.SpeckConfiguration()
-resolution = [128, 128]
-
-# Enable the raw monitor for the DVS (Dynamic Vision Sensor) layer.
-devkit_config.dvs_layer.raw_monitor_enable = True
-
-# Apply the configuration to the devkit model.
+devkit_config.dvs_layer.raw_monitor_enable = True  # Enable raw monitor for DVS
 devkit.get_model().apply_configuration(devkit_config)
 
-# Create a sink node, which will act as the data destination in the event stream.
+# Create a sink node to receive event stream data
 sink = samna.graph.sink_from(devkit.get_model_source_node())
 
-# Start the samna event processing graph to begin handling the event stream.
+# Start event processing
 samna_graph.start()
 
-# Fetch a block of events from the sink node, with a timeout of 1000ms (1 second).
-events = sink.get_events_blocking(1000)
-
-
-# Enable and reset the stopwatch on the devkit.
+# Enable and reset the devkit stopwatch
 devkit.get_stop_watch().set_enable_value(True)
 devkit.get_stop_watch().reset()
 
-# Create a window to plot the events in real-time
-window = np.zeros((resolution[1], resolution[0]), dtype=int)
-# Set up the plot
-fig, ax = plt.subplots()
-im = ax.imshow(window, cmap='gray', animated=True)
-plt.show(block=False)
+# Create an empty window (128x128) for event visualization
+window = np.zeros((resolution[1], resolution[0]), dtype=np.uint8)
 
-# Continuously process events in an infinite loop.
+# Time interval for updating the visualization
+update_interval = 0.03  # seconds
 last_update_time = time.time()
-update_interval = 0.1  # Update every 0.1 seconds
 
-numevs=0
+# Initialize variables to manage events
+numevs = 0  # Event counter
+events_lock = threading.Lock()  # To ensure thread-safe updates to shared variables
+
+# Function to fetch events in a separate thread
+def fetch_events():
+    global numevs
+    while True:
+        events = sink.get_events_blocking(1000)  # Fetch events with a timeout of 1 second
+        if events:
+            # Drop some events to reduce load (keep (1 - drop_rate)% of events)
+            filtered_events = [event for event in events if random.random() > drop_rate]
+
+            with events_lock:  # Lock to prevent data race conditions
+                # Only process filtered (non-dropped) events
+                if filtered_events:
+                    # Add events to the window (inverted Y-axis)
+                    window[[event.y for event in filtered_events], [event.x for event in filtered_events]] = 255
+                    numevs += len(filtered_events)  # Increment event count for processed events
+
+# Start the event-fetching thread
+event_thread = threading.Thread(target=fetch_events)
+event_thread.daemon = True  # Ensures the thread stops when the main program exits
+event_thread.start()
+
+# Main loop for visualization
 while True:
-    # print("Fetching events...")
-    events = sink.get_events_blocking(1000)
-    if events:
-        # print(f"Number of events fetched: {len(events)}")
-        window[[event.y for event in events], [event.x for event in events]] = 255
-        numevs+=len(events)
-        if numevs>10000:
-            plt.imshow(window, cmap='gray')
-            plt.draw()
-            plt.pause(0.0001)
-            # print(window)
-            window = np.zeros((resolution[1], resolution[0]), dtype=int)
-            numevs=0
+    current_time = time.time()
+    with events_lock:
+        # Update the plot if enough time has passed
+        if current_time - last_update_time > update_interval:
+            if numevs > 0:  # Only update the display if there are events
+                cv2.imshow('DVS Events', window)  # Display the window using OpenCV
+                cv2.waitKey(1)  # Wait for 1 ms to allow the window to update
+
+                # Clear the window and reset the event counter
+                window.fill(0)  # Efficiently reset window to zeros
+                numevs = 0
+            last_update_time = current_time  # Update the last refresh timestamp
