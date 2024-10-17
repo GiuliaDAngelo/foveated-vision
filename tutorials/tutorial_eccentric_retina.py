@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
 
 import numpy as np
@@ -9,7 +10,6 @@ import csv
 from helpers.helpers import *
 from helpers.config import *
 import imageio
-
 
 matplotlib.use('qt5agg')  # Sets up Matplotlib to use the Qt5 backend for graphical display
 
@@ -30,7 +30,7 @@ print('Number of neurons: ', len(neurons))
 
 # create a window matrix to store and plot spikes
 plt.figure()
-window = np.zeros((height+1,width+1))
+window = np.zeros((height + 1, width + 1))
 windows = []
 tw = 20
 
@@ -41,7 +41,7 @@ with torch.no_grad():  # Disable gradient computation (since it's not needed for
         IDs = mask[y[t]][x[t]]
         for ID in IDs:
             # Select the receptive field neuron at the current (x, y) location
-            out = neurons[ID].neuron(ts[:, t: t + 1])/(neurons[ID].radius**2)
+            out = neurons[ID].neuron(ts[:, t: t + 1]) / (neurons[ID].radius ** 2)
             # Check if the neuron produced any spikes
             if (out != 0).any():
                 # If so, record the spike by appending the spike data
@@ -54,13 +54,10 @@ with torch.no_grad():  # Disable gradient computation (since it's not needed for
                     plt.draw()
                     plt.pause(0.0001)
                     # empty window
-                    window = np.zeros((height+1, width+1))
+                    window = np.zeros((height + 1, width + 1))
                     t_window = t + tw
             # Record the neuron's membrane potential at the current time step
             neurons[ID].vmem.append(neurons[ID].neuron.v_mem[0, 0])
 
 # save windows as GIF
 imageio.mimsave('windows.gif', windows, duration=0.1)
-
-
-

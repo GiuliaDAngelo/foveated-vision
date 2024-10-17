@@ -8,7 +8,7 @@ import random
 
 # Visualization parameters
 resolution = [128, 128]  # Resolution of the DVS sensor
-drop_rate = 0.7  # Percentage of events to drop (e.g., 70% of events)
+drop_rate = 0.6  # Percentage of events to drop (e.g., 70% of events)
 
 # List all connected devices
 device_map = sio.get_device_map()
@@ -39,7 +39,7 @@ devkit.get_stop_watch().reset()
 window = np.zeros((resolution[1], resolution[0]), dtype=np.uint8)
 
 # Time interval for updating the visualization
-update_interval = 0.03  # seconds
+update_interval = 0.02  # seconds
 last_update_time = time.time()
 
 # Initialize variables to manage events

@@ -96,14 +96,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Assuming the following parameters are defined
-# a = 1.3
-# q = 2
-# rho0 = 0.5
-# R = 10
-# S = 15
-# width = 128
-# height = 128
 
 def create_eccentric_RFs():
     # Initialize neurons list
