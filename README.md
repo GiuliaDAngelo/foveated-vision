@@ -51,6 +51,9 @@ Time to connect your Speck to your computer and visualise the output of the sens
 
 - ### [tutorial_Speck_events](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speck_events.py)
 
+Now that you know how to visualise the events with the visualiser, let's create a visualiser to loof at the events directly from your code. 
+
+![SpeckEvents](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/images/SpeckEvents.gif)
 
 ## Installation
 Have a look at the [requirements.txt](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/requirements.txt) file to see the dependencies.
