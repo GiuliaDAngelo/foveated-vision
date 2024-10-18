@@ -219,12 +219,12 @@ if __name__ == "__main__":
                 if numevs[0] > 0:
                     salmap = run_attention(window)
                     cv2.circle(window[0].cpu().numpy(),
-                               np.unravel_index(salmap.cpu().detach().numpy().argmax(), salmap.shape), 5, (255, 255, 255),
+                               np.unravel_index(salmap.cpu().detach().numpy().argmax(), salmap.shape)[::-1], 5,
+                               (255, 255, 255),
                                -1)
-                    # cv2.imshow('DVS Events', window[0].cpu().numpy())
-                    cv2.imshow('Saliency map',
-                               cv2.applyColorMap(cv2.convertScaleAbs(salmap.detach().cpu().numpy()), cv2.COLORMAP_JET))
-                    # plt.scatter(*np.unravel_index(salmap.cpu().detach().numpy().argmax(), salmap.shape), c='r', s=100)
+                    cv2.imshow('DVS Events', window[0].cpu().numpy())
+                    # cv2.imshow('Saliency map',
+                    #            cv2.applyColorMap(cv2.convertScaleAbs(salmap.detach().cpu().numpy()), cv2.COLORMAP_JET))
                     cv2.waitKey(1)
                     window.fill_(0)
                     numevs[0] = 0
