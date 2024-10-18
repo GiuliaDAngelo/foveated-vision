@@ -1,0 +1,10 @@
+[2024-10-18 12:45:17.974] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 12:45:20.763] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 12:45:22.120] [Default] [warning] `set_enable_value` is DEPRECATED, use `start` and `stop` instead.
+[2024-10-18 12:47:46.414] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 12:47:49.241] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 12:47:51.383] [Default] [warning] `set_enable_value` is DEPRECATED, use `start` and `stop` instead.
+[2024-10-18 12:49:23.944] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 12:49:24.953] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 12:49:27.774] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 12:49:40.040] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
