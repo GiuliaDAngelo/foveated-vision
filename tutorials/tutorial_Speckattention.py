@@ -16,7 +16,11 @@ def fetch_events(sink, window, drop_rate, events_lock, numevs):
                     window[[event.y for event in filtered_events], [event.x for event in filtered_events]] = 255
                     numevs[0] += len(filtered_events)
 
-def run():
+def main():
+    # Visualization parameters
+    resolution = [128, 128]  # Resolution of the DVS sensor
+    drop_rate = 0.6  # Percentage of events to drop
+    update_interval = 0.02  # Update every 0.02 seconds
     last_update_time = time.time()
 
     # List all connected devices
@@ -59,8 +63,4 @@ def run():
                 last_update_time = current_time
 
 if __name__ == "__main__":
-    # Visualization parameters
-    resolution = [128, 128]  # Resolution of the DVS sensor
-    drop_rate = 0.6  # Percentage of events to drop
-    update_interval = 0.02  # Update every 0.02 seconds
-    run()
+    main()
