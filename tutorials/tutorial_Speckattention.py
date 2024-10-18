@@ -155,15 +155,15 @@ if __name__ == "__main__":
     # time_wnd_frames = 100000  # us ???? do I need it?
 
     # Visual attention paramters
-    size = 10  # Size of the kernel
+    size = 20  # Size of the kernel
     r0 = 8  # Radius shift from the center
     rho = 0.1  # Scale coefficient to control arc length
     theta = np.pi * 3 / 2  # Angle to control the orientation of the arc
     thick = 3  # thickness of the arc
-    offsetpxs = size/4
+    offsetpxs = size/2
     offset = (offsetpxs, offsetpxs)
     fltr_resize_perc = [2, 2]
-    num_pyr = 3
+    num_pyr = 1
 
     # Create Von Mises (VM) filters with specified parameters
     # The angles are generated in radians, ranging from 0 to 2π in steps of π/4
@@ -218,9 +218,13 @@ if __name__ == "__main__":
             if current_time - last_update_time > update_interval:
                 if numevs[0] > 0:
                     salmap = run_attention(window)
+                    cv2.circle(window[0].cpu().numpy(),
+                               np.unravel_index(salmap.cpu().detach().numpy().argmax(), salmap.shape), 5, (255, 255, 255),
+                               -1)
                     # cv2.imshow('DVS Events', window[0].cpu().numpy())
                     cv2.imshow('Saliency map',
                                cv2.applyColorMap(cv2.convertScaleAbs(salmap.detach().cpu().numpy()), cv2.COLORMAP_JET))
+                    # plt.scatter(*np.unravel_index(salmap.cpu().detach().numpy().argmax(), salmap.shape), c='r', s=100)
                     cv2.waitKey(1)
                     window.fill_(0)
                     numevs[0] = 0
