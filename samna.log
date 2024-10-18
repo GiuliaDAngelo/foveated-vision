@@ -8,3 +8,75 @@
 [2024-10-18 12:49:24.953] [Speck2fBoards] [info] Speck 2f dev kit initialized.
 [2024-10-18 12:49:27.774] [Speck2fBoards] [info] Speck 2f model initialized.
 [2024-10-18 12:49:40.040] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 13:25:08.815] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 13:25:11.615] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 13:25:17.759] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 14:25:14.789] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:25:17.609] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:25:20.280] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 14:26:31.564] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:26:34.376] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:31:39.722] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:31:42.537] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:32:53.890] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 14:32:58.534] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:33:01.322] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:33:38.866] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:33:41.685] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:34:07.140] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:34:09.963] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:36:13.682] [Graph] [warning] Graph is destroyed while running! Note: Filter nodes constructed by `sequential` method won't work after corresponding graph is destroyed and please manually stop the graph after use.
+[2024-10-18 14:36:20.565] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:36:23.362] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:37:08.755] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:37:11.550] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:37:49.413] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:37:52.225] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:39:59.614] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:40:02.443] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:40:59.775] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:41:02.585] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:41:36.095] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:41:38.886] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:43:00.475] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:43:03.286] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:43:25.756] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:43:28.568] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:43:49.683] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:43:52.485] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:44:11.609] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:44:14.428] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:46:15.974] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:46:18.787] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 14:59:35.809] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 14:59:38.603] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:01:48.776] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:01:51.586] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:08:04.463] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:08:07.274] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:08:24.210] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:08:26.986] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:11:53.560] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:11:56.367] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:12:55.451] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:12:58.237] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:13:44.243] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:13:47.038] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:14:20.699] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:14:23.497] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:16:13.783] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:16:16.578] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:16:44.259] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:16:47.068] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:18:18.685] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:18:21.487] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:19:47.938] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:19:50.752] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:34:34.245] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:34:37.061] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:39:29.666] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:39:32.478] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:50:14.689] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:50:17.487] [Speck2fBoards] [info] Speck 2f model initialized.
+[2024-10-18 15:51:04.506] [Speck2fBoards] [info] Speck 2f dev kit initialized.
+[2024-10-18 15:51:07.317] [Speck2fBoards] [info] Speck 2f model initialized.
