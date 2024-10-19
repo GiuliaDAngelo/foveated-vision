@@ -1,3 +1,10 @@
+'''
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script visualize the events from the DVS sensor.
+'''
+
+
 import numpy as np
 import cv2
 import sinabs.backend.dynapcnn.io as sio

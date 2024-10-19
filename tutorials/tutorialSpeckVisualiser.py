@@ -1,3 +1,11 @@
+'''
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script run the Speck visualizer to visualize the DVS events.
+'''
+
+
+
 # Import the necessary module from Sinabs for interacting with Dynap-CNN devices
 import sinabs.backend.dynapcnn.io as sio
 # Import the Samna library, which helps build and manage event-based networks for neuromorphic devices

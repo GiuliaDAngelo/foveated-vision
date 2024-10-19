@@ -1,3 +1,12 @@
+'''
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script run the proto-object visual attention model on the DVS events.
+
+D’Angelo, Giulia, et al. "Event driven bio-inspired attentive system for the iCub humanoid robot on SpiNNaker." Neuromorphic Computing and Engineering 2.2 (2022): 024008.
+'''
+
+
 import numpy as np
 import cv2
 import sinabs.backend.dynapcnn.io as sio

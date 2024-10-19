@@ -1,3 +1,11 @@
+'''
+Giulia D'Angelo, giulia.dangelo@fel.cvut.cz
+
+This script simulate the eccentric representation of the retina using log-polar mapping.
+'''
+
+
+
 import sys
 
 sys.path.append('/Users/giuliadangelo/workspace/code/foveated-vision')
