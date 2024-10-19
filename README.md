@@ -97,7 +97,7 @@ This script streams events from a Dynamic Vision Sensor (DVS) integrated on the 
 It fetches events in real-time, applies the network to generate a saliency map, and visualizes both the events and saliency using OpenCV. 
 The von Mises filters are initialized for attention modeling, and a background thread manages event collection.
 
-![]()
+![speckattention](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/images/RealTimeAttentionSpeck.gif)
 
 - References: [D’Angelo, Giulia, et al. "Event driven bio-inspired attentive system for the iCub humanoid robot on SpiNNaker." Neuromorphic Computing and Engineering 2.2 (2022): 024008](https://iopscience.iop.org/article/10.1088/2634-4386/ac6b50/meta)
 
