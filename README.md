@@ -104,12 +104,11 @@ The von Mises filters are initialized for attention modeling, and a background t
 ## Installation
 Have a look at the [requirements.txt](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/requirements.txt) file to see the dependencies.
 
-### Features:
-- **Foveated Receptive Fields**: These fields allow for a more detailed visual representation at the center (fovea), while progressively coarser representation occurs as you move towards the periphery. This mimics the behavior of the human visual system.
-- **Leaky Integrate-and-Fire Neurons**: These neurons are implemented using the Sinabs library's LIF model, which captures the spiking dynamics essential for neuromorphic computing.
-  
-### Components:
-- **Retina Layer**: This module creates a foveated retina where the receptive field size changes according to the distance from the center. You can adjust the density of neurons and their activation patterns.
-- **Spiking Neural Network (SNN) Processing**: The input from the retina is processed by a spiking neural network using LIF neurons. The Sinabs library provides the underlying infrastructure for creating and training these networks.
+To install the library, you can clone the repository and install the requirements with the following commands:
 
+```bash
+git clone
+cd foveated-vision
+pip install -r requirements.txt
+```
 

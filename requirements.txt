@@ -6,3 +6,8 @@ imageio
 torch
 sinabs
 samna
+opencv-python
+torchvision
+scikit-learn
+scipy
+
