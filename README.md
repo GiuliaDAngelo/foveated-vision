@@ -16,6 +16,7 @@ visual processing tasks with biologically inspired models of vision.
 - [tutorial_create_eccentric_retina](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_create_eccentric_retina.py)
 - [tutorialSpeckVisualiser](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorialSpeckVisualiser.py)
 - [tutorial_Speck_events](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speck_events.py)
+- [tutorial_SpeckAttention](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speckattention.py)
 
 ## Let's start! 
 
@@ -91,7 +92,9 @@ Events are dropped based on a predefined rate, and the visualization is updated 
 ![SpeckEvents](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/images/SpeckEvents.gif)
 
 
-- ### Run attention on Speck 
+- ### Run attention on Speck
+
+[tutorial_SpeckAttention](https://github.com/GiuliaDAngelo/foveated-vision/blob/main/tutorials/tutorial_Speckattention.py)
 
 This script streams events from a Dynamic Vision Sensor (DVS) integrated on the Speck and processes them through a spiking convolutional neural network using von Mises filters.
 It fetches events in real-time, applies the network to generate a saliency map, and visualizes both the events and saliency using OpenCV. 
